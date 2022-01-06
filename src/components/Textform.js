@@ -39,7 +39,8 @@ export default function Textform(props) {
     }
     
     const handelcopyclick = () => {
-        navigator.clipboard.writeText(text);
+        let textval = document.getElementById("exampleFormControlTextarea1");
+        navigator.clipboard.writeText(textval.value);
         props.showalert("success" , "Text copied in Clipboard");
         navigator.vibrate(200);
         if (text.length === 0) {
